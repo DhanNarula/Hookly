@@ -14,26 +14,28 @@ export default function Hero() {
       className="relative isolate overflow-hidden bg-gray-950 pt-28 pb-20 sm:pt-32 sm:pb-28"
     >
       <video
-        className="pointer-events-none absolute inset-0 -z-20 h-full w-full object-cover brightness-50 saturate-150"
+        className="pointer-events-none absolute inset-0 -z-20 h-full w-full object-cover brightness-75 contrast-110 saturate-125"
         autoPlay
         muted
         loop
         playsInline
         aria-hidden="true"
       >
-        <source src="/media/hookly-flower-tech.mp4" type="video/mp4" />
+        <source src="/media/hero.mp4" type="video/mp4" />
       </video>
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-gray-950/70 via-gray-950/90 to-gray-950" />
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.25),_transparent_55%)]" />
+      {/* Soft vignette so the background is visible but text stays readable */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-gray-950/10 via-gray-950/60 to-gray-950/95" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(15,23,42,0.85),_transparent_55%)]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,_rgba(56,189,248,0.16),_transparent_55%)]" />
 
       <div className="mx-auto flex max-w-7xl flex-col gap-16 px-4 sm:px-6 lg:flex-row lg:items-center lg:gap-20 lg:px-8">
         <div className="max-w-xl space-y-8 lg:flex-1">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-white/80 backdrop-blur">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-white/80 backdrop-blur animate-fade-in stagger-1 opacity-0">
             <span className="inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
             Live for creators who care about conversion
           </div>
           <h1
-            className={`${heroDisplay.className} text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl`}
+            className={`${heroDisplay.className} text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl animate-slide-up stagger-2 opacity-0`}
           >
             <span className="block text-sm font-medium uppercase tracking-[0.35em] text-emerald-300/80">
               HOOKLY
@@ -45,13 +47,13 @@ export default function Hero() {
               for creators who want to go viral.
             </span>
           </h1>
-          <p className="text-lg text-gray-300">
+          <p className="text-lg text-gray-300 animate-slide-up stagger-3 opacity-0">
             Hookly analyzes thousands of viral campaigns to help you discover,
             test, and ship marketing hooks that actually convert—before you hit
             publish.
           </p>
           <form
-            className="flex flex-col gap-3 sm:flex-row sm:max-w-md"
+            className="flex flex-col gap-3 sm:flex-row sm:max-w-md animate-slide-up stagger-4 opacity-0"
             onSubmit={(e) => e.preventDefault()}
           >
             <input
@@ -66,7 +68,7 @@ export default function Hero() {
               Get started free
             </button>
           </form>
-          <div className="flex flex-col gap-3 text-sm text-gray-400 sm:flex-row sm:items-center sm:gap-4">
+          <div className="flex flex-col gap-3 text-sm text-gray-400 sm:flex-row sm:items-center sm:gap-4 animate-fade-in stagger-5 opacity-0">
             <span>No credit card required · 14-day trial</span>
             <button
               type="button"
@@ -78,9 +80,9 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative w-full max-w-xl lg:flex-1">
-          <div className="animate-slide-up opacity-0 [animation-delay:0.15s] [animation-fill-mode:forwards]">
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-5 shadow-[0_18px_60px_rgba(15,23,42,0.8)] backdrop-blur">
+        <div className="relative w-full max-w-xl lg:flex-1 animate-slide-up stagger-3 opacity-0">
+          <div className="transition-transform duration-500 ease-out hover:-translate-y-1 hover:scale-[1.02]">
+            <div className="rounded-3xl border border-white/15 bg-gray-950/60 p-5 shadow-[0_18px_60px_rgba(15,23,42,0.9)] backdrop-blur">
               <div className="flex items-center gap-2 pb-4">
                 <div className="h-2.5 w-2.5 rounded-full bg-red-400/80" />
                 <div className="h-2.5 w-2.5 rounded-full bg-yellow-400/80" />
@@ -110,7 +112,7 @@ export default function Hero() {
               </div>
             </div>
           </div>
-          <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[2.25rem] bg-gradient-to-tr from-primary-500/40 via-accent-500/30 to-emerald-400/30 opacity-60 blur-3xl" />
+          <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[2.25rem] bg-gradient-to-tr from-primary-500/40 via-accent-500/30 to-emerald-400/30 opacity-60 blur-3xl animate-float-slow" />
         </div>
       </div>
     </section>
