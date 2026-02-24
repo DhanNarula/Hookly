@@ -43,13 +43,16 @@ const plans = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="bg-gray-950 py-20 sm:py-28">
+    <section
+      id="pricing"
+      className="bg-gray-50 py-20 sm:py-28 dark:bg-gray-950"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
             Simple, transparent pricing
           </h2>
-          <p className="mt-4 text-lg text-gray-400">
+          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
             Start free. Upgrade when you&apos;re ready. No hidden fees.
           </p>
         </div>
@@ -59,8 +62,8 @@ export default function Pricing() {
               key={plan.name}
               className={`relative rounded-2xl border p-8 ${
                 plan.highlighted
-                  ? "border-primary-400 bg-primary-950/40 shadow-lg ring-2 ring-primary-500/80"
-                  : "border-white/10 bg-gray-900/70 shadow-sm hover:border-white/30"
+                  ? "border-primary-400 bg-primary-50 shadow-lg ring-2 ring-primary-500/40 dark:bg-primary-950/40 dark:ring-primary-500/80"
+                  : "border-gray-200 bg-white shadow-sm hover:border-gray-300 dark:border-white/10 dark:bg-gray-900/70 dark:hover:border-white/30"
               }`}
             >
               {plan.highlighted && (
@@ -68,17 +71,26 @@ export default function Pricing() {
                   Most popular
                 </div>
               )}
-              <h3 className="text-xl font-semibold text-white">{plan.name}</h3>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                {plan.name}
+              </h3>
               <div className="mt-4 flex items-baseline gap-1">
-                <span className="text-4xl font-bold text-white">
+                <span className="text-4xl font-bold text-gray-900 dark:text-white">
                   {plan.price}
                 </span>
-                <span className="text-gray-400">{plan.period}</span>
+                <span className="text-gray-600 dark:text-gray-400">
+                  {plan.period}
+                </span>
               </div>
-              <p className="mt-2 text-gray-400">{plan.description}</p>
+              <p className="mt-2 text-gray-600 dark:text-gray-400">
+                {plan.description}
+              </p>
               <ul className="mt-6 space-y-3">
                 {plan.features.map((f) => (
-                  <li key={f} className="flex items-center gap-2 text-gray-300">
+                  <li
+                    key={f}
+                    className="flex items-center gap-2 text-gray-700 dark:text-gray-300"
+                  >
                     <svg
                       className="h-5 w-5 flex-shrink-0 text-primary-500"
                       fill="currentColor"

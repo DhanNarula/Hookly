@@ -7,25 +7,29 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-gray-950">
+    <footer className="border-t border-gray-200 bg-white dark:border-white/10 dark:bg-gray-950">
       <div id="resources" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-1">
-            <span className="text-xl font-bold text-white">Hookly</span>
-            <p className="mt-4 text-sm text-gray-600">
+            <span className="text-xl font-bold text-gray-900 dark:text-white">
+              Hookly
+            </span>
+            <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
               The platform for creators who want to discover and sell viral
               marketing hooks.
             </p>
           </div>
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h4 className="text-sm font-semibold text-gray-100">{category}</h4>
+              <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                {category}
+              </h4>
               <ul className="mt-4 space-y-3">
                 {links.map((link) => (
                   <li key={link}>
                     <a
                       href="#"
-                      className="text-sm text-gray-400 hover:text-white transition-colors"
+                      className="text-sm text-gray-500 hover:text-gray-900 transition-colors dark:text-gray-400 dark:hover:text-white"
                     >
                       {link}
                     </a>
