@@ -1,13 +1,13 @@
 export default function Demo() {
   return (
-    <section className="bg-gray-50/50 py-20 sm:py-28">
+    <section className="bg-gray-950 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
           <div className="space-y-6">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Your hook library, organized
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-400">
               Save, categorize, and analyze every hook you discover. Our smart
               dashboard surfaces what&apos;s working so you can iterate faster
               and scale what converts.
@@ -30,13 +30,13 @@ export default function Demo() {
                       clipRule="evenodd"
                     />
                   </svg>
-                  <span className="text-gray-600">{item}</span>
+                  <span className="text-gray-300">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
           <div className="relative">
-            <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-lg">
+            <div className="rounded-2xl border border-white/10 bg-gray-900/70 p-6 shadow-xl shadow-primary-500/20 backdrop-blur">
               <div className="mb-4 flex items-center gap-2">
                 <div className="h-2.5 w-2.5 rounded-full bg-red-400" />
                 <div className="h-2.5 w-2.5 rounded-full bg-yellow-400" />
@@ -44,14 +44,14 @@ export default function Demo() {
               </div>
               <div className="space-y-4">
                 <div className="flex gap-4">
-                  <div className="h-10 flex-1 rounded-lg bg-gray-100" />
-                  <div className="h-10 w-24 rounded-lg bg-primary-100" />
+                  <div className="h-10 flex-1 rounded-lg bg-white/5" />
+                  <div className="h-10 w-24 rounded-lg bg-primary-500/80" />
                 </div>
                 <div className="grid grid-cols-4 gap-2">
                   {Array.from({ length: 8 }).map((_, i) => (
                     <div
                       key={i}
-                      className="h-16 rounded-lg bg-gray-50 border border-gray-100"
+                      className="h-16 rounded-lg border border-white/5 bg-gray-900/60"
                     />
                   ))}
                 </div>
@@ -59,7 +59,7 @@ export default function Demo() {
                   {[70, 90, 60, 85].map((w, i) => (
                     <div
                       key={i}
-                      className="h-4 rounded bg-gray-100"
+                      className="h-4 rounded bg-white/10"
                       style={{ width: `${w}%` }}
                     />
                   ))}

@@ -24,7 +24,7 @@ const benefits = [
 
 export default function Benefits() {
   return (
-    <section className="py-20 sm:py-28">
+    <section className="bg-gray-950 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {benefits.map((benefit, i) => (
           <div
@@ -36,10 +36,10 @@ export default function Benefits() {
             <div
               className={`${benefit.reverse ? "lg:order-2" : "order-2 lg:order-1"}`}
             >
-              <h3 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+              <h3 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
                 {benefit.title}
               </h3>
-              <p className="mt-4 text-lg text-gray-600">{benefit.description}</p>
+              <p className="mt-4 text-lg text-gray-400">{benefit.description}</p>
             </div>
             <div
               className={`order-1 rounded-2xl bg-gradient-to-br ${benefit.gradient} h-64 flex items-center justify-center ${
@@ -47,9 +47,9 @@ export default function Benefits() {
               }`}
             >
               <div className="flex gap-4 p-8">
-                <div className="h-24 w-24 rounded-xl bg-white/60" />
-                <div className="h-24 w-24 rounded-xl bg-white/40" />
-                <div className="h-24 w-24 rounded-xl bg-white/60" />
+                <div className="h-24 w-24 rounded-xl bg-gray-950/70" />
+                <div className="h-24 w-24 rounded-xl bg-gray-950/40" />
+                <div className="h-24 w-24 rounded-xl bg-gray-950/70" />
               </div>
             </div>
           </div>

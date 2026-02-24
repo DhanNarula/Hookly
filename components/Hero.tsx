@@ -1,5 +1,12 @@
 "use client";
 
+import { Space_Grotesk } from "next/font/google";
+
+const heroDisplay = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 export default function Hero() {
   return (
     <section
@@ -7,14 +14,14 @@ export default function Hero() {
       className="relative isolate overflow-hidden bg-gray-950 pt-28 pb-20 sm:pt-32 sm:pb-28"
     >
       <video
-        className="pointer-events-none absolute inset-0 -z-20 h-full w-full object-cover"
+        className="pointer-events-none absolute inset-0 -z-20 h-full w-full object-cover brightness-50 saturate-150"
         autoPlay
         muted
         loop
         playsInline
         aria-hidden="true"
       >
-        <source src="/media/hookly-hero.mp4" type="video/mp4" />
+        <source src="/media/hookly-flower-tech.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-gray-950/70 via-gray-950/90 to-gray-950" />
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.25),_transparent_55%)]" />
@@ -25,10 +32,18 @@ export default function Hero() {
             <span className="inline-flex h-1.5 w-1.5 rounded-full bg-emerald-400" />
             Live for creators who care about conversion
           </div>
-          <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            AI-native hook engine
-            <br />
-            for modern creators.
+          <h1
+            className={`${heroDisplay.className} text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl`}
+          >
+            <span className="block text-sm font-medium uppercase tracking-[0.35em] text-emerald-300/80">
+              HOOKLY
+            </span>
+            <span className="mt-3 block bg-gradient-to-r from-emerald-300 via-sky-300 to-violet-300 bg-clip-text text-transparent">
+              AI-native hook engine
+            </span>
+            <span className="mt-1 block text-[2.2rem] font-medium text-white/85 sm:text-[2.6rem]">
+              for creators who want to go viral.
+            </span>
           </h1>
           <p className="text-lg text-gray-300">
             Hookly analyzes thousands of viral campaigns to help you discover,

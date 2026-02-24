@@ -63,13 +63,13 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="product" className="py-20 sm:py-28">
+    <section id="product" className="bg-gray-950 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Everything you need to go viral
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-4 text-lg text-gray-400">
             From discovery to monetization, Hookly gives creators the tools to
             craft hooks that capture attention and convert.
           </p>
@@ -78,19 +78,19 @@ export default function Features() {
           {features.map((feature, i) => (
             <div
               key={feature.title}
-              className="group rounded-2xl border border-gray-100 bg-white p-8 shadow-sm transition-all hover:border-primary-100 hover:shadow-md"
+              className="group rounded-2xl border border-white/10 bg-gray-900/60 p-8 shadow-sm transition-all hover:border-primary-400/60 hover:shadow-lg hover:shadow-primary-500/20"
               style={{
                 animation: `slideUp 0.6s ease-out ${i * 0.1}s forwards`,
                 opacity: 0,
               }}
             >
-              <div className="mb-4 inline-flex rounded-xl bg-primary-50 p-3 text-primary-600 transition-colors group-hover:bg-primary-100">
+              <div className="mb-4 inline-flex rounded-xl bg-primary-500/10 p-3 text-primary-300 transition-colors group-hover:bg-primary-500/20">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold text-gray-900">
+              <h3 className="text-xl font-semibold text-white">
                 {feature.title}
               </h3>
-              <p className="mt-2 text-gray-600">{feature.description}</p>
+              <p className="mt-2 text-gray-400">{feature.description}</p>
             </div>
           ))}
         </div>
