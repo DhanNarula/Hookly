@@ -62,7 +62,7 @@ export default function Pricing() {
               key={plan.name}
               className={`relative rounded-2xl border p-8 ${
                 plan.highlighted
-                  ? "border-primary-400 bg-primary-50 shadow-lg ring-2 ring-primary-500/40 dark:bg-primary-950/40 dark:ring-primary-500/80"
+                  ? "border-primary-400 bg-primary-50 shadow-lg ring-2 ring-primary-500/40"
                   : "border-gray-200 bg-white shadow-sm hover:border-gray-300 dark:border-white/10 dark:bg-gray-900/70 dark:hover:border-white/30"
               }`}
             >
@@ -71,25 +71,53 @@ export default function Pricing() {
                   Most popular
                 </div>
               )}
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+              <h3
+                className={`text-xl font-semibold ${
+                  plan.highlighted
+                    ? "text-gray-900"
+                    : "text-gray-900 dark:text-white"
+                }`}
+              >
                 {plan.name}
               </h3>
               <div className="mt-4 flex items-baseline gap-1">
-                <span className="text-4xl font-bold text-gray-900 dark:text-white">
+                <span
+                  className={`text-4xl font-bold ${
+                    plan.highlighted
+                      ? "text-gray-900"
+                      : "text-gray-900 dark:text-white"
+                  }`}
+                >
                   {plan.price}
                 </span>
-                <span className="text-gray-600 dark:text-gray-400">
+                <span
+                  className={`${
+                    plan.highlighted
+                      ? "text-gray-700"
+                      : "text-gray-600 dark:text-gray-400"
+                  }`}
+                >
                   {plan.period}
                 </span>
               </div>
-              <p className="mt-2 text-gray-600 dark:text-gray-400">
+              <p
+                className={`mt-2 ${
+                  plan.highlighted
+                    ? "text-gray-700"
+                    : "text-gray-600 dark:text-gray-400"
+                }`}
+              >
                 {plan.description}
               </p>
               <ul className="mt-6 space-y-3">
                 {plan.features.map((f) => (
                   <li
                     key={f}
-                    className="flex items-center gap-2 text-gray-700 dark:text-gray-300"
+                    className={`flex items-center gap-2 ${
+                      plan.highlighted
+                        ? "text-gray-800"
+                        : "text-gray-700 dark:text-gray-300"
+                    }`}
                   >
                     <svg
                       className="h-5 w-5 flex-shrink-0 text-primary-500"
