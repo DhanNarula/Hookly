@@ -15,9 +15,9 @@ export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-gray-200/60 bg-white/80 backdrop-blur-lg dark:border-white/10 dark:bg-gray-950/70">
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+    <header className="fixed left-0 right-0 top-4 z-50 px-4 sm:px-6 lg:px-8">
+      <nav className="relative mx-auto max-w-4xl">
+        <div className="flex items-center justify-between rounded-2xl border border-gray-200/60 bg-white/80 px-4 py-3 shadow-lg shadow-gray-200/50 backdrop-blur-xl dark:border-white/10 dark:bg-gray-950/80 dark:shadow-black/20 sm:px-5">
           <Link
             href="/"
             className="text-xl font-bold text-gray-900 hover:text-primary-500 transition-colors dark:text-white dark:hover:text-primary-300"
@@ -25,19 +25,19 @@ export default function Navbar() {
             Hookly
           </Link>
 
-          <div className="hidden md:flex md:items-center md:gap-8">
+          <div className="hidden md:flex md:items-center md:gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors dark:text-gray-200 dark:hover:text-white"
+                className="rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 hover:text-gray-900 dark:text-gray-200 dark:hover:bg-white/10 dark:hover:text-white"
               >
                 {link.label}
               </Link>
             ))}
           </div>
 
-          <div className="hidden md:flex md:items-center md:gap-4">
+          <div className="hidden md:flex md:items-center md:gap-2">
             <button
               type="button"
               onClick={toggleTheme}
@@ -52,7 +52,7 @@ export default function Navbar() {
             </button>
             <Link
               href="#login"
-              className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors dark:text-gray-200 dark:hover:text-white"
+              className="rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 hover:text-gray-900 dark:text-gray-200 dark:hover:bg-white/10 dark:hover:text-white"
             >
               Login
             </Link>
@@ -96,13 +96,13 @@ export default function Navbar() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200 bg-white/95 animate-fade-in dark:border-white/10 dark:bg-gray-950/95">
-            <div className="flex flex-col gap-4">
+          <div className="absolute left-4 right-4 top-full mt-2 rounded-2xl border border-gray-200/60 bg-white/95 py-4 shadow-xl backdrop-blur-xl animate-fade-in dark:border-white/10 dark:bg-gray-950/95 md:hidden">
+            <div className="flex flex-col gap-1 px-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors dark:text-gray-200 dark:hover:text-white"
+                  className="rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors dark:text-gray-200 dark:hover:bg-white/10 dark:hover:text-white"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}
@@ -110,14 +110,24 @@ export default function Navbar() {
               ))}
               <Link
                 href="#login"
-                className="text-sm font-medium text-gray-700 dark:text-gray-200"
+                className="rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-white/10"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Login
               </Link>
+              <button
+                type="button"
+                onClick={() => {
+                  toggleTheme();
+                  setMobileMenuOpen(false);
+                }}
+                className="flex items-center gap-2 rounded-lg px-3 py-2 text-left text-sm font-medium text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-white/10"
+              >
+                {theme === "dark" ? "☀️ Light mode" : "🌙 Dark mode"}
+              </button>
               <Link
                 href="#hero"
-                className="rounded-full bg-gray-900 px-4 py-2 text-sm font-medium text-white text-center hover:bg-black transition-colors dark:bg-white dark:text-gray-950 dark:hover:bg-gray-100"
+                className="mt-2 rounded-full bg-gray-900 px-4 py-2.5 text-sm font-medium text-white text-center hover:bg-black transition-colors dark:bg-white dark:text-gray-950 dark:hover:bg-gray-100"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Start Free
