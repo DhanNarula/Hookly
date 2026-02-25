@@ -30,7 +30,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 hover:text-gray-900 dark:text-gray-200 dark:hover:bg-white/10 dark:hover:text-white"
+                className="rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-all hover:bg-gray-100 hover:text-gray-900 hover:ring-1 hover:ring-gray-300 dark:text-gray-200 dark:hover:bg-white/10 dark:hover:text-white dark:hover:ring-white/20"
               >
                 {link.label}
               </Link>
@@ -52,7 +52,7 @@ export default function Navbar() {
             </button>
             <Link
               href="#login"
-              className="rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-100 hover:text-gray-900 dark:text-gray-200 dark:hover:bg-white/10 dark:hover:text-white"
+              className="rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-all hover:bg-gray-100 hover:text-gray-900 hover:ring-1 hover:ring-gray-300 dark:text-gray-200 dark:hover:bg-white/10 dark:hover:text-white dark:hover:ring-white/20"
             >
               Login
             </Link>
@@ -102,7 +102,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-colors dark:text-gray-200 dark:hover:bg-white/10 dark:hover:text-white"
+                  className="rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-all hover:bg-gray-100 hover:text-gray-900 hover:ring-1 hover:ring-gray-300 dark:text-gray-200 dark:hover:bg-white/10 dark:hover:text-white dark:hover:ring-white/20"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {link.label}
@@ -110,7 +110,7 @@ export default function Navbar() {
               ))}
               <Link
                 href="#login"
-                className="rounded-lg px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-white/10"
+                className="rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition-all hover:bg-gray-100 hover:text-gray-900 hover:ring-1 hover:ring-gray-300 dark:text-gray-200 dark:hover:bg-white/10 dark:hover:text-white dark:hover:ring-white/20"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Login
@@ -121,7 +121,7 @@ export default function Navbar() {
                   toggleTheme();
                   setMobileMenuOpen(false);
                 }}
-                className="flex items-center gap-2 rounded-lg px-3 py-2 text-left text-sm font-medium text-gray-700 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-white/10"
+                className="flex items-center gap-2 rounded-lg px-3 py-2 text-left text-sm font-medium text-gray-700 transition-all hover:bg-gray-100 hover:ring-1 hover:ring-gray-300 dark:text-gray-200 dark:hover:bg-white/10 dark:hover:ring-white/20"
               >
                 {theme === "dark" ? "☀️ Light mode" : "🌙 Dark mode"}
               </button>
