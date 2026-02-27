@@ -37,10 +37,10 @@ export default function Hero() {
           <h1
             className={`${heroDisplay.className} text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl animate-slide-up stagger-2 opacity-0 dark:text-white`}
           >
-            <span className="block text-sm font-medium uppercase tracking-[0.35em] text-emerald-500/80 dark:text-emerald-300/80">
+            <span className="block text-sm font-medium uppercase tracking-[0.35em] text-emerald-600 dark:text-emerald-300">
               HOOKLY
             </span>
-            <span className="mt-3 block bg-gradient-to-r from-emerald-300 via-sky-300 to-violet-300 bg-clip-text text-transparent">
+            <span className="mt-3 block bg-gradient-to-r from-emerald-600 via-sky-600 to-violet-600 bg-clip-text text-transparent dark:from-emerald-300 dark:via-sky-300 dark:to-violet-300">
               AI-native hook engine
             </span>
             <span className="mt-1 block text-[2.2rem] font-medium text-gray-800 sm:text-[2.6rem] dark:text-white/85">
