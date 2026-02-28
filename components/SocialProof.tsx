@@ -5,6 +5,7 @@ const companies = [
   "Attention Inc.",
   "Convertify",
   "Engage Pro",
+  "VS Industries",
 ];
 
 export default function SocialProof() {
