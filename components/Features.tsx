@@ -2,7 +2,7 @@ const features = [
   {
     icon: (
       <svg
-        className="h-8 w-8"
+        className="h-6 w-6"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -22,7 +22,7 @@ const features = [
   {
     icon: (
       <svg
-        className="h-8 w-8"
+        className="h-6 w-6"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -42,7 +42,7 @@ const features = [
   {
     icon: (
       <svg
-        className="h-8 w-8"
+        className="h-6 w-6"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -65,35 +65,35 @@ export default function Features() {
   return (
     <section
       id="product"
-      className="bg-white py-20 sm:py-28 dark:bg-gray-950"
+      className="bg-white py-16 sm:py-20 dark:bg-gray-950"
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-xl mx-auto mb-10">
+          <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl dark:text-white">
             Everything you need to go viral
           </h2>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+          <p className="mt-3 text-base text-gray-600 dark:text-gray-400">
             From discovery to monetization, Hookly gives creators the tools to
             craft hooks that capture attention and convert.
           </p>
         </div>
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, i) => (
             <div
               key={feature.title}
-              className="group rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-all hover:border-primary-400/60 hover:shadow-lg hover:shadow-primary-500/20 dark:border-white/10 dark:bg-gray-900/60"
+              className="group rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:border-primary-400/60 dark:border-white/10 dark:bg-gray-900/60"
               style={{
                 animation: `slideUp 0.6s ease-out ${i * 0.1}s forwards`,
                 opacity: 0,
               }}
             >
-              <div className="mb-4 inline-flex rounded-xl bg-primary-500/10 p-3 text-primary-300 transition-colors group-hover:bg-primary-500/20">
+              <div className="mb-3 inline-flex rounded-lg bg-primary-500/10 p-2.5 text-primary-300 transition-colors group-hover:bg-primary-500/20">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                 {feature.title}
               </h3>
-              <p className="mt-2 text-gray-600 dark:text-gray-400">
+              <p className="mt-1.5 text-sm text-gray-600 dark:text-gray-400">
                 {feature.description}
               </p>
             </div>

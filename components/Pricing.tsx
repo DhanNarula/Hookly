@@ -45,22 +45,22 @@ export default function Pricing() {
   return (
     <section
       id="pricing"
-      className="bg-gray-50 py-20 sm:py-28 dark:bg-gray-950"
+      className="bg-gray-50 py-16 sm:py-20 dark:bg-gray-950"
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-xl mx-auto mb-10">
+          <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl dark:text-white">
             Simple, transparent pricing
           </h2>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+          <p className="mt-3 text-base text-gray-600 dark:text-gray-400">
             Start free. Upgrade when you&apos;re ready. No hidden fees.
           </p>
         </div>
-        <div className="grid gap-8 lg:grid-cols-3 lg:gap-6">
+        <div className="grid gap-6 lg:grid-cols-3 lg:gap-4">
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`relative rounded-2xl border p-8 ${
+              className={`relative rounded-xl border p-6 ${
                 plan.highlighted
                   ? "border-primary-400 bg-primary-50 shadow-lg ring-2 ring-primary-500/40"
                   : "border-gray-200 bg-white shadow-sm hover:border-gray-300 dark:border-white/10 dark:bg-gray-900/70 dark:hover:border-white/30"
@@ -72,7 +72,7 @@ export default function Pricing() {
                 </div>
               )}
               <h3
-                className={`text-xl font-semibold ${
+                className={`text-lg font-semibold ${
                   plan.highlighted
                     ? "text-gray-900"
                     : "text-gray-900 dark:text-white"
@@ -82,7 +82,7 @@ export default function Pricing() {
               </h3>
               <div className="mt-4 flex items-baseline gap-1">
                 <span
-                  className={`text-4xl font-bold ${
+                  className={`text-3xl font-bold ${
                     plan.highlighted
                       ? "text-gray-900"
                       : "text-gray-900 dark:text-white"
@@ -109,7 +109,7 @@ export default function Pricing() {
               >
                 {plan.description}
               </p>
-              <ul className="mt-6 space-y-3">
+              <ul className="mt-4 space-y-2">
                 {plan.features.map((f) => (
                   <li
                     key={f}
@@ -136,7 +136,7 @@ export default function Pricing() {
               </ul>
               <button
                 type="button"
-                className={`mt-8 w-full rounded-xl py-3 font-medium transition-colors ${
+                className={`mt-6 w-full rounded-lg py-2.5 font-medium transition-colors ${
                   plan.highlighted
                     ? "bg-white text-gray-950 hover:bg-gray-100"
                     : "border border-white/30 text-white hover:border-white hover:bg-white/5"

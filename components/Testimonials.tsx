@@ -24,28 +24,28 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-white py-20 sm:py-28 dark:bg-gray-950">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
+    <section className="bg-white py-16 sm:py-20 dark:bg-gray-950">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-xl mx-auto mb-10">
+          <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl dark:text-white">
             Loved by creators everywhere
           </h2>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+          <p className="mt-3 text-base text-gray-600 dark:text-gray-400">
             See why thousands of creators use Hookly to grow their reach and
             revenue.
           </p>
         </div>
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-all hover:border-primary-400/60 hover:shadow-lg hover:shadow-primary-500/20 dark:border-white/10 dark:bg-gray-900/70"
+              className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:border-primary-400/60 dark:border-white/10 dark:bg-gray-900/70"
             >
               <p className="text-gray-700 italic dark:text-gray-300">
                 &ldquo;{t.quote}&rdquo;
               </p>
-              <div className="mt-6 flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary-500/20 text-sm font-semibold text-primary-200">
+              <div className="mt-4 flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary-500/20 text-xs font-semibold text-primary-600 dark:text-primary-300">
                   {t.avatar}
                 </div>
                 <div>

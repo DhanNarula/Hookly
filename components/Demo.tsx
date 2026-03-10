@@ -1,18 +1,18 @@
 export default function Demo() {
   return (
-    <section className="bg-white py-20 sm:py-28 dark:bg-gray-950">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-center">
-          <div className="space-y-6">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl dark:text-white">
+    <section className="bg-white py-16 sm:py-20 dark:bg-gray-950">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-10 lg:grid-cols-2 lg:gap-12 lg:items-center">
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl dark:text-white">
               Your hook library, organized
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400">
+            <p className="text-base text-gray-600 dark:text-gray-400">
               Save, categorize, and analyze every hook you discover. Our smart
               dashboard surfaces what&apos;s working so you can iterate faster
               and scale what converts.
             </p>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {[
                 "Save hooks from any platform with one click",
                 "Tag and organize by niche, format, and goal",
@@ -38,8 +38,8 @@ export default function Demo() {
             </ul>
           </div>
           <div className="relative">
-            <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-xl shadow-primary-500/20 backdrop-blur dark:border-white/10 dark:bg-gray-900/70">
-              <div className="mb-4 flex items-center gap-2">
+            <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-lg backdrop-blur dark:border-white/10 dark:bg-gray-900/70">
+              <div className="mb-3 flex items-center gap-2">
                 <div className="h-2.5 w-2.5 rounded-full bg-red-400" />
                 <div className="h-2.5 w-2.5 rounded-full bg-yellow-400" />
                 <div className="h-2.5 w-2.5 rounded-full bg-green-400" />

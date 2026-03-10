@@ -8,13 +8,13 @@ const footerLinks = {
 export default function Footer() {
   return (
     <footer className="border-t border-gray-200 bg-white dark:border-white/10 dark:bg-gray-950">
-      <div id="resources" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-5">
+      <div id="resources" className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-1">
             <span className="text-xl font-bold text-gray-900 dark:text-white">
               Hookly
             </span>
-            <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+            <p className="mt-3 text-sm text-gray-600 dark:text-gray-400">
               The platform for creators who want to discover and sell viral
               marketing hooks.
             </p>
@@ -24,7 +24,7 @@ export default function Footer() {
               <h4 className="text-sm font-semibold text-gray-900 dark:text-gray-100">
                 {category}
               </h4>
-              <ul className="mt-4 space-y-3">
+              <ul className="mt-3 space-y-2">
                 {links.map((link) => (
                   <li key={link}>
                     <a
@@ -39,7 +39,7 @@ export default function Footer() {
             </div>
           ))}
         </div>
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 sm:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-gray-200 pt-6 dark:border-white/10 sm:flex-row">
           <p className="text-sm text-gray-500">
             &copy; {new Date().getFullYear()} Hookly. All rights reserved.
           </p>
